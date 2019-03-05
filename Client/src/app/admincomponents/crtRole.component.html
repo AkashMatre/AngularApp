@@ -1,0 +1,57 @@
+<div class="col-lg-8 col-md-7">
+    <div class="card">
+       <div class="header">
+           <h4 class="title">Create System User</h4>
+       </div>
+       <div class="content">
+           <form>
+                   <div class="row">
+                           <div class="col-md-4">
+                               <div class="form-group">
+                                   <label>Role</label>
+                              
+                                   <select class="form-control border-input" name="Role" [(ngModel)]="crtrl.Role"> 
+                                      <option>Select</option>
+                                      <option>Operator</option>
+                                      <option>Access User</option>
+                                      <option>Admin</option>
+                                   </select>
+                               </div>
+                           </div>
+                           <div class="col-md-4">
+                               <div class="form-group">
+                                   <label for="exampleInputEmail1">First Name</label>
+                                   <input type="text" class="form-control border-input"  name="FirstName" [(ngModel)]="crtrl.FirstName">
+                               </div>
+                           </div>
+                           <div class="col-md-4">
+                               <div class="form-group">
+                                   <label for="exampleInputEmail1">Last Name</label>
+                                   <input type="text" class="form-control border-input"  name="LastName" [(ngModel)]="crtrl.LastName"/>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="row">
+                   <div class="col-md-2"></div>
+                   <div class="col-md-4">
+                               <div class="form-group">
+                                   <label for="exampleInputEmail1">Mobile No</label>
+                                   <input type="text" class="form-control border-input"   name="MobileNo" [(ngModel)]="crtrl.MobileNo"/>
+                               </div>
+                           </div>
+                           <div class="col-md-4">
+                               <div class="form-group">
+                                   <label for="exampleInputEmail1">Email-Id</label>
+                                   <input type="text" class="form-control border-input"   name="Email" [(ngModel)]="crtrl.Email"/>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="text-center">
+                          <button type="button" class="btn btn-info btn-fill btn-wd" (click)="crtRole()">Create</button>
+                      </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+

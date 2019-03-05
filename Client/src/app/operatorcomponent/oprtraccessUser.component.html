@@ -1,0 +1,81 @@
+<div class="content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="header">
+                      <h4 class="title">Access Users....</h4>
+                      <!-- {/* <p class="category">Here is a subtitle for this table</p> */} -->
+                  </div>
+
+          <div class="content">
+
+               <div class="row">
+               <div class="col-md-2"></div>
+                       <div class="col-md-4">
+                           <div class="form-group">
+                               <!-- {/* <label>Users</label> */}
+                               {/* <input type="text" class="form-control border-input" placeholder="Username"  /> */} -->
+                               <select class="form-control border-input" value={this.state.UserTyp} onChange={this.onChangeUserTyp.bind(this)} name="UserTyp">
+                                  <option>Pending</option>
+                                  <option>Approved</option>
+                                  <option>Rejected</option>
+                                  <option>All</option>
+                               </select>
+                           </div>
+
+                       </div>
+                       <div class="text-center">
+                              <button type="button" class="btn btn-info btn-fill btn-wd" (click)="search()">Search</button>
+                          </div>
+
+                   </div>
+
+                </div>
+
+                  <div class="content table-responsive table-full-width">
+                      <table class="table table-striped">
+                          <thead>
+                              <!-- {/* <th>ID</th> */} -->
+                              <th>User Id</th>
+                            <th>Name</th>
+                            <th>Mobile No</th>
+                            <th>Email</th>
+                            <th>City</th>
+                              <!-- <td></td>
+                              <td></td> -->
+                          </thead>
+                          <tbody>
+                              <tr *ngFor="let c of userdta">
+                                <td>{{c.Usr_Id}}</td>
+                                <td>{{c.FullName.FirstName}} {{c.FullName.LastName}}</td>
+                                <td>{{c.MobileNo}}</td>
+                                <td>{{c.Email}}</td>
+                                <td>{{c.City}}</td>
+                                <!-- <td><img src='./../img/hglogo.png' (click)="aprvRjctUsr(c,'aprv')"></td>
+                                <td><img src='./../img/hglogo.png' (click)="aprvRjctUsr(c,'rjct')"></td> -->
+                              </tr>
+
+                          <!-- {this.state.tabledta.map((tabledta, index) => {
+                              return (
+                                  <tr key={index}>
+                                      <td>{tabledta.Usr_Id}</td>
+                                      <td>{tabledta.FullName.FirstName} {tabledta.FullName.MiddleName} {tabledta.FullName.LastName} </td>
+                                      <td>{tabledta.MobileNo} </td>
+                                      <td>{tabledta.Email} </td>
+                                      <td>{tabledta.City} </td>
+                                      <td><td onClick={(e) => this.aprvRjctUsr(tabledta,'aprv')}><img src={apr} /></td><td onClick={(e) => this.aprvRjctUsr(tabledta,'rjct')}><img src={rjct}/></td></td>
+                                  </tr>
+                                  )
+                              }
+                              )} -->
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <ul>
+</ul>
+</div>
